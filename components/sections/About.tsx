@@ -2,8 +2,7 @@ import { useTranslations } from "next-intl"
 
 const tagIds = ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"]
 
-const photoPlaceholder =
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+const photoPlaceholder = "/rhenan.png"
 
 export default function About() {
   const t = useTranslations("about")

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useTranslations } from "next-intl"
+import { IconArrowRight } from "@tabler/icons-react"
 
 export default function Contact() {
   const t = useTranslations("contact")
@@ -37,23 +38,21 @@ export default function Contact() {
         </h3>
 
         <div className="mt-12 md:mt-16">
-  <button
-    onClick={handleCopy}
-    className="group inline-flex items-center gap-3 font-display text-2xl md:text-3xl text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200 cursor-pointer"
-  >
-    {email}
-    <span className="inline-flex items-center gap-2">
-      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">
-        →
-      </span>
-      {copied && (
-        <span className="font-body text-sm text-(--color-text-secondary) animate-fade-in">
-          {t("copied")}
-        </span>
-      )}
-    </span>
-  </button>
-</div>
+          <button
+            onClick={handleCopy}
+            className="group inline-flex items-center gap-3 font-display text-2xl md:text-3xl text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200 cursor-pointer"
+          >
+            {email}
+            <span className="inline-flex items-center gap-2">
+            <IconArrowRight size={20} stroke={1.5} className="transition-transform duration-300 ease-out group-hover:translate-x-1" />
+              {copied && (
+                <span className="font-body text-sm text-(--color-text-secondary) animate-fade-in">
+                  {t("copied")}
+                </span>
+              )}
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   )

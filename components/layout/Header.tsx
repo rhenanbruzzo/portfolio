@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import { IconSun, IconMoon, IconMenu2, IconX, IconArrowUpRight } from "@tabler/icons-react"
 
 export default function Header() {
   const t = useTranslations("nav")
@@ -74,7 +75,7 @@ export default function Header() {
               aria-label="Toggle theme"
               className="w-9 h-9 flex items-center justify-center rounded-full text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-surface-raised) transition-all duration-200"
             >
-              {theme === "light" ? "☀" : "☽"}
+              {theme === "light" ? <IconSun size={18} stroke={1.5} /> : <IconMoon size={18} stroke={1.5} />}
             </button>
           </div>
         </nav>
@@ -86,14 +87,14 @@ export default function Header() {
             aria-label="Toggle theme"
             className="w-9 h-9 flex items-center justify-center text-(--color-text-secondary)"
           >
-            {theme === "light" ? "☀" : "☽"}
+            {theme === "light" ? <IconSun size={18} stroke={1.5} /> : <IconMoon size={18} stroke={1.5} />}
           </button>
           <button
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
             className="w-9 h-9 flex items-center justify-center text-(--color-text-primary)"
           >
-            <MenuIcon />
+            <IconMenu2 size={22} stroke={1.5} />
           </button>
         </div>
       </div>
@@ -113,7 +114,7 @@ export default function Header() {
               aria-label="Close menu"
               className="w-9 h-9 flex items-center justify-center text-(--color-text-primary)"
             >
-              <CloseIcon />
+              <IconX size={22} stroke={1.5} />
             </button>
           </div>
 
@@ -128,7 +129,9 @@ export default function Header() {
                 className="flex items-center justify-between py-5 border-b border-(--color-border) text-2xl font-display font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200"
               >
                 {link.label}
-                {link.external && <span className="text-lg">↗</span>}
+                {link.external && (
+                  <IconArrowUpRight size={16} stroke={1.5} />
+                )}
               </a>
             ))}
           </nav>
@@ -155,24 +158,5 @@ function LangToggle() {
         EN
       </a>
     </div>
-  )
-}
-
-function MenuIcon() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-      <line x1="4" y1="7" x2="20" y2="7" />
-      <line x1="4" y1="12" x2="20" y2="12" />
-      <line x1="4" y1="17" x2="20" y2="17" />
-    </svg>
-  )
-}
-
-function CloseIcon() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-      <line x1="5" y1="5" x2="19" y2="19" />
-      <line x1="19" y1="5" x2="5" y2="19" />
-    </svg>
   )
 }

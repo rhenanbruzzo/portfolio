@@ -54,5 +54,12 @@
     "email": "rhenanbruzzo@gmail.com",
     "copy": "Copiar email",
     "copied": "Copiado!"
+  },
+  "footer": {
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "dribbble": "Dribbble"
+    }
   }
   }
