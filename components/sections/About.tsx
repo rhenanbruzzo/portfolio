@@ -1,7 +1,8 @@
+"use client"
+
 import { useTranslations } from "next-intl"
 
 const tagIds = ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"]
-
 const photoPlaceholder = "/rhenan.png"
 
 export default function About() {
@@ -19,7 +20,6 @@ export default function About() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_400px] gap-8 md:gap-10 items-stretch">
-        {/* Coluna esquerda: bio + chips */}
         <div className="flex flex-col min-w-0">
           <p className="font-body text-base md:text-lg leading-relaxed text-(--color-text-secondary)">
             {t("bio")}
@@ -40,7 +40,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Coluna direita: foto */}
         <div className="order-first md:order-last">
           <div
             className="aspect-[4/5] w-full rounded-lg bg-cover bg-center"

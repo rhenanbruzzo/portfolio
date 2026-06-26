@@ -38,7 +38,7 @@ export default function Contact() {
         </h2>
       </div>
 
-      <div className="py-8 md:py-0">
+      <div className="py-8 md:py-16">
         <h3 className="font-display font-medium text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-(--color-text-primary)">
           {t("title")}
           <br />
@@ -62,26 +62,25 @@ export default function Contact() {
           </button>
         </div>
 
-        {/* Redes sociais */}
-<ul className="flex items-center gap-6 flex-wrap mt-10 md:mt-12 pb-10 md:pb-16">
-  {socialLinks.map(({ id, href }) => (
-    <li key={id}>
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group inline-flex items-center gap-2 font-body text-base text-(--color-text-secondary) transition-colors duration-200"
-      >
-        {id === "linkedin" && <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
-        {id === "github" && <FontAwesomeIcon icon={faGithub} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
-        {id === "dribbble" && <FontAwesomeIcon icon={faDribbble} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
-        <span className="group-hover:underline underline-offset-4">
-          {t(`social.${id}`)}
-        </span>
-      </a>
-    </li>
-  ))}
-</ul>
+        <ul className="flex items-center gap-6 flex-wrap mt-10 md:mt-12 pb-10 md:pb-16">
+          {socialLinks.map(({ id, href }) => (
+            <li key={id}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 font-body text-base text-(--color-text-secondary) transition-colors duration-200"
+              >
+                {id === "linkedin" && <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
+                {id === "github" && <FontAwesomeIcon icon={faGithub} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
+                {id === "dribbble" && <FontAwesomeIcon icon={faDribbble} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
+                <span className="group-hover:underline underline-offset-4">
+                  {t(`social.${id}`)}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
