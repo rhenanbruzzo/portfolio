@@ -1,0 +1,23 @@
+{
+    "nav": {
+      "work": "Work",
+      "about": "Sobre",
+      "contact": "Contato",
+      "resume": "Currículo"
+    },
+    "hero": {
+      "tagline": "Product designer criando interfaces bem pensadas para times que se importam com a experiência.",
+      "bio": "15 anos como designer gráfico e digital, sendo 6 como product designer. Projetos B2B e B2C em e-commerce, admin SaaS e aplicativos."
+    },
+    "work": {
+      "heading": "Trabalhos selecionados"
+    },
+    "about": {
+      "heading": "Sobre"
+    },
+    "contact": {
+      "heading": "Tem um projeto em mente?",
+      "subheading": "Vamos conversar.",
+      "email": "rhenanbruzzo@gmail.com"
+    }
+  }
