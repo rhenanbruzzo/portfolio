@@ -8,8 +8,8 @@
     "linkedin": "LinkedIn"
   },
     "hero": {
-      "tagline": "Product designer criando interfaces bem pensadas para times que se importam com a experiência.",
-      "bio": "15 anos como designer gráfico e digital, sendo 6 como product designer. Projetos B2B e B2C em e-commerce, admin SaaS e aplicativos."
+    "tagline": "Product designer criando interfaces bem pensadas para times que <accent>se importam</accent> com a experiência.",
+    "bio": "15 anos como designer gráfico e digital, sendo 6 como product designer. Projetos B2B e B2C em e-commerce, admin SaaS e aplicativos."
     },
     "work": {
       "heading": "Trabalhos selecionados"

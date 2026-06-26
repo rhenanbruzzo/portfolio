@@ -8,9 +8,9 @@
     "linkedin": "LinkedIn"
   },
     "hero": {
-      "tagline": "Product designer crafting considered interfaces for teams who care about the experience.",
-      "bio": "15 years as a graphic and digital designer, 6 as a product designer. B2B and B2C projects across e-commerce, admin SaaS and mobile apps."
-    },
+    "tagline": "Product designer crafting considered interfaces for teams <accent>who care</accent> about the experience.",
+    "bio": "15 years as a graphic and digital designer, 6 as a product designer. B2B and B2C projects across e-commerce, admin SaaS and mobile apps."
+   },
     "work": {
       "heading": "Selected work"
     },
