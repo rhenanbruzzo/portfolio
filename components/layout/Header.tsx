@@ -1,0 +1,178 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
+import Link from "next/link"
+
+export default function Header() {
+  const t = useTranslations("nav")
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [theme, setTheme] = useState<"light" | "dark">("light")
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme") as "light" | "dark" | null
+    if (saved) {
+      setTheme(saved)
+      document.documentElement.classList.toggle("dark", saved === "dark")
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    const next = theme === "light" ? "dark" : "light"
+    setTheme(next)
+    localStorage.setItem("theme", next)
+    document.documentElement.classList.toggle("dark", next === "dark")
+  }
+
+  const handleLinkClick = (e: React.MouseEvent, href: string) => {
+    if (href === "#top") {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: "smooth" })
+      window.history.replaceState(null, "", window.location.pathname)
+    }
+    setMenuOpen(false)
+  }
+
+  const navLinks = [
+    { label: t("home"), href: "#top", external: false },
+    { label: t("work"), href: "#work", external: false },
+    { label: t("about"), href: "#about", external: false },
+    { label: t("contact"), href: "#contact", external: false },
+    { label: t("resume"), href: "/curriculo", external: true },
+    { label: t("linkedin"), href: "https://www.linkedin.com/in/rhenanbruzzo/", external: true },
+  ]
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-(--color-surface) border-b border-(--color-border)">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-24 h-16 md:h-20 flex items-center justify-between">
+        <Link
+          href="/"
+          onClick={(e) => handleLinkClick(e, "#top")}
+          className="font-display font-medium text-base md:text-lg text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200"
+        >
+          Rhenan Bruzzo
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-1">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              onClick={(e) => handleLinkClick(e, link.href)}
+              className="text-sm font-medium px-3 py-2 rounded text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-surface-raised) transition-all duration-200"
+            >
+              {link.label}
+            </a>
+          ))}
+
+          <div className="flex items-center gap-2 ml-3 pl-3 border-l border-(--color-border)">
+            <LangToggle />
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="w-9 h-9 flex items-center justify-center rounded-full text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-surface-raised) transition-all duration-200"
+            >
+              {theme === "light" ? "☀" : "☽"}
+            </button>
+          </div>
+        </nav>
+
+        <div className="flex md:hidden items-center gap-3">
+          <LangToggle />
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="w-9 h-9 flex items-center justify-center text-(--color-text-secondary)"
+          >
+            {theme === "light" ? "☀" : "☽"}
+          </button>
+          <button
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+            className="w-9 h-9 flex items-center justify-center text-(--color-text-primary)"
+          >
+            <MenuIcon />
+          </button>
+        </div>
+      </div>
+
+      {menuOpen && (
+        <div className="fixed inset-0 z-50 bg-(--color-surface) flex flex-col">
+          <div className="px-6 h-16 flex items-center justify-between border-b border-(--color-border)">
+            <Link
+              href="/"
+              className="font-display font-medium text-base text-(--color-text-primary)"
+              onClick={(e) => handleLinkClick(e, "#top")}
+            >
+              Rhenan Bruzzo
+            </Link>
+            <button
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+              className="w-9 h-9 flex items-center justify-center text-(--color-text-primary)"
+            >
+              <CloseIcon />
+            </button>
+          </div>
+
+          <nav className="flex flex-col px-6 pt-8 gap-0">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className="flex items-center justify-between py-5 border-b border-(--color-border) text-2xl font-display font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200"
+              >
+                {link.label}
+                {link.external && <span className="text-lg">↗</span>}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
+  )
+}
+
+function LangToggle() {
+  return (
+    <div className="flex items-center gap-1 text-sm">
+      <a
+        href="/"
+        className="px-2 py-1 rounded text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors duration-200"
+      >
+        PT
+      </a>
+      <span className="text-(--color-border-strong)">/</span>
+      <a
+        href="/en"
+        className="px-2 py-1 rounded text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors duration-200"
+      >
+        EN
+      </a>
+    </div>
+  )
+}
+
+function MenuIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+      <line x1="4" y1="7" x2="20" y2="7" />
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <line x1="4" y1="17" x2="20" y2="17" />
+    </svg>
+  )
+}
+
+function CloseIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+      <line x1="5" y1="5" x2="19" y2="19" />
+      <line x1="19" y1="5" x2="5" y2="19" />
+    </svg>
+  )
+}

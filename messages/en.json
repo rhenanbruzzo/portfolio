@@ -1,10 +1,12 @@
 {
     "nav": {
-      "work": "Work",
-      "about": "About",
-      "contact": "Contact",
-      "resume": "Résumé"
-    },
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "resume": "Resume",
+    "linkedin": "LinkedIn"
+  },
     "hero": {
       "tagline": "Product designer crafting considered interfaces for teams who care about the experience.",
       "bio": "15 years as a graphic and digital designer, 6 as a product designer. B2B and B2C projects across e-commerce, admin SaaS and mobile apps."
