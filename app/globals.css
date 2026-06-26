@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+@theme {
+  /* ─── Tipografia ─── */
+  --font-display: "Geist", sans-serif;
+  --font-body: "Nunito", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* ─── Accent (#D13B3B) ─── */
+  --color-accent: #D13B3B;
+  --color-accent-hover: #B83333;
+
+  /* ─── Superfícies — Light ─── */
+  --color-surface: #f8fafc;        /* slate-50 — 60% fundo principal */
+  --color-surface-raised: #f1f5f9; /* slate-100 — cards, hover sutil */
+  --color-surface-overlay: #e2e8f0;/* slate-200 — bordas, divisores */
+
+  /* ─── Texto — Light ─── */
+  --color-text-primary: #0f172a;   /* slate-900 */
+  --color-text-secondary: #475569; /* slate-600 */
+  --color-text-tertiary: #94a3b8;  /* slate-400 — labels, placeholders */
+
+  /* ─── Borda — Light ─── */
+  --color-border: #e2e8f0;         /* slate-200 */
+  --color-border-strong: #cbd5e1;  /* slate-300 */
+}
+
+/* ─── Dark mode (classe .dark no <html>) ─── */
+.dark {
+  --color-surface: #020617;        /* slate-950 — 60% fundo principal */
+  --color-surface-raised: #0f172a; /* slate-900 — cards */
+  --color-surface-overlay: #1e293b;/* slate-800 — hover, bordas */
+
+  --color-text-primary: #f8fafc;   /* slate-50 */
+  --color-text-secondary: #94a3b8; /* slate-400 */
+  --color-text-tertiary: #475569;  /* slate-600 */
+
+  --color-border: #1e293b;         /* slate-800 */
+  --color-border-strong: #334155;  /* slate-700 */
+}
+
+/* ─── Base global ─── */
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
