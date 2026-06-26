@@ -17,6 +17,27 @@
     "about": {
       "heading": "Sobre"
     },
+    "cases": {
+    "heading": "Cases selecionados",
+    "items": {
+      "case1": {
+        "title": "Título do case 01",
+        "description": "Descrição curta do projeto — o que era, pra quem, qual o impacto. Substituir com conteúdo real depois."
+      },
+      "case2": {
+        "title": "Título do case 02",
+        "description": "Descrição curta do projeto — o que era, pra quem, qual o impacto. Substituir com conteúdo real depois."
+      },
+      "case3": {
+        "title": "Título do case 03",
+        "description": "Descrição curta do projeto — o que era, pra quem, qual o impacto. Substituir com conteúdo real depois."
+      },
+      "case4": {
+        "title": "Título do case 04",
+        "description": "Descrição curta do projeto — o que era, pra quem, qual o impacto. Substituir com conteúdo real depois."
+      }
+    }
+  },
     "contact": {
       "heading": "Tem um projeto em mente?",
       "subheading": "Vamos conversar.",

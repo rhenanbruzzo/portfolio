@@ -17,6 +17,27 @@
     "about": {
       "heading": "About"
     },
+    "cases": {
+    "heading": "Selected work",
+    "items": {
+      "case1": {
+        "title": "Case 01 title",
+        "description": "Short project description — what it was, who it was for, the impact. Replace with real content later."
+      },
+      "case2": {
+        "title": "Case 02 title",
+        "description": "Short project description — what it was, who it was for, the impact. Replace with real content later."
+      },
+      "case3": {
+        "title": "Case 03 title",
+        "description": "Short project description — what it was, who it was for, the impact. Replace with real content later."
+      },
+      "case4": {
+        "title": "Case 04 title",
+        "description": "Short project description — what it was, who it was for, the impact. Replace with real content later."
+      }
+    }
+  },
     "contact": {
       "heading": "Have a project in mind?",
       "subheading": "Let's talk.",
