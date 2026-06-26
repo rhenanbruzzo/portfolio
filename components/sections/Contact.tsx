@@ -46,41 +46,40 @@ export default function Contact() {
         </h3>
 
         <div className="mt-12 md:mt-16">
-          <button
-            onClick={handleCopy}
-            className="group inline-flex items-center gap-3 font-display text-2xl md:text-3xl text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200 cursor-pointer"
-          >
-            {email}
-            <span className="inline-flex items-center gap-2">
-              <IconArrowRight size={16} stroke={1.5} className="transition-transform duration-300 ease-out group-hover:translate-x-1" />
-              {copied && (
-                <span className="font-body text-sm text-(--color-text-secondary) animate-fade-in">
-                  {t("copied")}
-                </span>
-              )}
-            </span>
-          </button>
+        <button
+  onClick={handleCopy}
+  className="group inline-flex items-center gap-3 font-display text-2xl md:text-3xl text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200 cursor-pointer"
+>
+  <span className="group-hover:underline underline-offset-4">
+    {email}
+  </span>
+  {copied && (
+    <span className="font-body text-sm text-(--color-text-secondary) animate-fade-in">
+      {t("copied")}
+    </span>
+  )}
+</button>
         </div>
 
         <ul className="flex items-center gap-6 flex-wrap mt-10 md:mt-12 pb-10 md:pb-16">
-          {socialLinks.map(({ id, href }) => (
-            <li key={id}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 font-body text-base text-(--color-text-secondary) transition-colors duration-200"
-              >
-                {id === "linkedin" && <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
-                {id === "github" && <FontAwesomeIcon icon={faGithub} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
-                {id === "dribbble" && <FontAwesomeIcon icon={faDribbble} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
-                <span className="group-hover:underline underline-offset-4">
-                  {t(`social.${id}`)}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
+  {socialLinks.map(({ id, href }) => (
+    <li key={id}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group inline-flex items-center gap-2 font-body text-base text-(--color-text-secondary) hover:text-(--color-accent) transition-colors duration-200"
+      >
+        {id === "linkedin" && <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
+        {id === "github" && <FontAwesomeIcon icon={faGithub} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
+        {id === "dribbble" && <FontAwesomeIcon icon={faDribbble} className="w-5 h-5 flex-shrink-0" aria-hidden="true" />}
+        <span className="group-hover:underline underline-offset-4">
+          {t(`social.${id}`)}
+        </span>
+      </a>
+    </li>
+  ))}
+</ul>
       </div>
     </section>
   )

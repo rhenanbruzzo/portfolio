@@ -46,27 +46,26 @@ export default function Cases() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {cases.map((item) => (
           <a
-            key={item.id}
-            href={`/cases/${item.slug}`}
-            className="group relative aspect-[608/440] overflow-hidden rounded-lg block transition-transform duration-300 ease-out hover:-translate-y-1"
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
-              style={{ backgroundImage: `url(${item.image})` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div className="relative h-full p-8 md:p-10 flex flex-col justify-between text-white">
-              <span className="font-mono text-sm">{item.number}</span>
-              <div>
-                <h3 className="font-display font-medium text-2xl md:text-3xl leading-tight">
-                  {t(`items.${item.id}.title`)}
-                </h3>
-                <p className="font-body text-sm md:text-base leading-relaxed text-white/80 max-w-md mt-3">
-                  {t(`items.${item.id}.description`)}
-                </p>
-              </div>
+          key={item.id}
+          href={`/cases/${item.slug}`}
+          className="group relative aspect-[608/440] overflow-hidden rounded-lg block transition-transform duration-300 ease-out hover:-translate-y-1"
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+            style={{ backgroundImage: `url(${item.image})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+          <div className="relative h-full p-8 md:p-10 flex flex-col justify-end text-white">
+            <div>
+              <h3 className="font-display font-medium text-2xl md:text-3xl leading-tight text-white">
+                {t(`items.${item.id}.title`)}
+              </h3>
+              <p className="font-body text-sm md:text-base leading-relaxed text-white/90 max-w-md mt-3">
+                {t(`items.${item.id}.description`)}
+              </p>
             </div>
-          </a>
+          </div>
+        </a>
         ))}
       </div>
     </section>
