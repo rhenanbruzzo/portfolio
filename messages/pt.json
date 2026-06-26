@@ -47,9 +47,12 @@
       }
     }
   },
-    "contact": {
-      "heading": "Tem um projeto em mente?",
-      "subheading": "Vamos conversar.",
-      "email": "rhenanbruzzo@gmail.com"
-    }
+   "contact": {
+    "heading": "Contato",
+    "title": "Tem um projeto em mente?",
+    "subtitle": "Vamos conversar.",
+    "email": "rhenanbruzzo@gmail.com",
+    "copy": "Copiar email",
+    "copied": "Copiado!"
+  }
   }

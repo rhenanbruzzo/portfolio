@@ -48,8 +48,11 @@
     }
   },
     "contact": {
-      "heading": "Have a project in mind?",
-      "subheading": "Let's talk.",
-      "email": "rhenanbruzzo@gmail.com"
-    }
+    "heading": "Contact",
+    "title": "Got a project in mind?",
+    "subtitle": "Let's talk.",
+    "email": "rhenanbruzzo@gmail.com",
+    "copy": "Copy email",
+    "copied": "Copied!"
+  }
   }
