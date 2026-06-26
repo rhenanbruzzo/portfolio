@@ -8,15 +8,24 @@
     "linkedin": "LinkedIn"
   },
     "hero": {
-    "tagline": "Product designer crafting considered interfaces for teams <accent>who care</accent> about the experience.",
-    "bio": "15 years as a graphic and digital designer, 6 as a product designer. B2B and B2C projects across e-commerce, admin SaaS and mobile apps."
-   },
+    "tagline": "Product designer crafting considered interfaces for teams <accent>who care</accent> about the experience."
+  },
     "work": {
       "heading": "Selected work"
     },
     "about": {
-      "heading": "About"
-    },
+    "heading": "About",
+    "bio": "I'm a product designer with 15 years of experience crafting interfaces for teams who care about the details. I've worked on B2B and B2C projects — e-commerce, admin SaaS, mobile apps — always balancing business vision, user experience and technical feasibility.",
+    "tagsHeading": "Areas of focus",
+    "tags": {
+      "tag1": "Product design",
+      "tag2": "Design systems",
+      "tag3": "Prototyping",
+      "tag4": "User research",
+      "tag5": "Interaction design",
+      "tag6": "Accessibility"
+    }
+  },
     "cases": {
     "heading": "Selected work",
     "items": {

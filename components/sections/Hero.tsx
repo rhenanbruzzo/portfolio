@@ -15,10 +15,6 @@ export default function Hero() {
           ),
         })}
       </h1>
-
-      <p className="font-body text-base md:text-lg leading-relaxed text-(--color-text-secondary) max-w-[640px] mt-10">
-        {t("bio")}
-      </p>
     </section>
   )
 }
