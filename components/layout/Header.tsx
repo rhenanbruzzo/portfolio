@@ -40,7 +40,6 @@ export default function Header() {
     { label: t("about"), href: "#about", external: false },
     { label: t("contact"), href: "#contact", external: false },
     { label: t("resume"), href: "/curriculo", external: true },
-    { label: t("linkedin"), href: "https://www.linkedin.com/in/rhenanbruzzo/", external: true },
   ]
 
   return (

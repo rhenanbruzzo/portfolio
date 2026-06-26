@@ -12,7 +12,7 @@ export default function Footer() {
   const t = useTranslations("footer")
 
   return (
-    <footer className="border-t border-(--color-border) mt-10 md:mt-16">
+    <footer className="mt-0">
       <div className="px-6 md:px-24 py-8 md:py-10 max-w-[1440px] mx-auto">
         <ul className="flex items-center gap-1 md:gap-2 flex-wrap">
           {socialLinks.map(({ id, href, icon }) => (

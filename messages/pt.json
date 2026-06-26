@@ -4,8 +4,7 @@
     "work": "Cases",
     "about": "Sobre",
     "contact": "Contato",
-    "resume": "Currículo",
-    "linkedin": "LinkedIn"
+    "resume": "Currículo"
   },
     "hero": {
     "tagline": "Product designer criando interfaces bem pensadas para times que <accent>se importam</accent> com a experiência."
@@ -53,13 +52,74 @@
     "subtitle": "Vamos conversar.",
     "email": "rhenanbruzzo@gmail.com",
     "copy": "Copiar email",
-    "copied": "Copiado!"
+    "copied": "Copiado!",
+    "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "dribbble": "Dribbble"
+}
   },
   "footer": {
     "social": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
       "dribbble": "Dribbble"
+    }
+  }
+  ,
+  "resume": {
+    "downloadLabel": "Baixar currículo",
+    "downloadWord": "Word",
+    "downloadPdf": "PDF",
+    "role": "Product Designer",
+    "sections": {
+      "summary": "Resumo",
+      "experience": "Experiência",
+      "education": "Formação",
+      "skills": "Habilidades"
+    },
+    "summary": "Placeholder — descreva aqui seu perfil profissional em 2-3 frases.",
+    "experience": {
+      "1": {
+        "role": "Senior Product Designer",
+        "company": "Empresa Placeholder",
+        "period": "2022 — presente",
+        "description": "Placeholder — descreva suas responsabilidades e impacto nessa posição."
+      },
+      "2": {
+        "role": "Product Designer",
+        "company": "Empresa Placeholder",
+        "period": "2019 — 2022",
+        "description": "Placeholder — descreva suas responsabilidades e impacto nessa posição."
+      },
+      "3": {
+        "role": "Designer Gráfico / UI Designer",
+        "company": "Empresa Placeholder",
+        "period": "2010 — 2019",
+        "description": "Placeholder — descreva suas responsabilidades e impacto nessa posição."
+      }
+    },
+    "education": {
+      "1": {
+        "degree": "Graduação em Design",
+        "school": "Instituição Placeholder",
+        "period": "2008 — 2012"
+      },
+      "2": {
+        "degree": "Pós-graduação em UX",
+        "school": "Instituição Placeholder",
+        "period": "2015 — 2016"
+      }
+    },
+    "skills": {
+      "1": "Product Design",
+      "2": "Design Systems",
+      "3": "Figma",
+      "4": "Prototipagem",
+      "5": "Pesquisa com usuários",
+      "6": "Acessibilidade",
+      "7": "Next.js",
+      "8": "Tailwind CSS"
     }
   }
   }

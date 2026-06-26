@@ -94,3 +94,17 @@ body {
 .animate-fade-in {
   animation: fade-in 200ms ease-out;
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  a:visited {
+    color: inherit;
+  }
+}

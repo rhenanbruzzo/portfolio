@@ -4,8 +4,7 @@
     "work": "Work",
     "about": "About",
     "contact": "Contact",
-    "resume": "Resume",
-    "linkedin": "LinkedIn"
+    "resume": "Resume"
   },
     "hero": {
     "tagline": "Product designer crafting considered interfaces for teams <accent>who care</accent> about the experience."
@@ -53,13 +52,74 @@
     "subtitle": "Let's talk.",
     "email": "rhenanbruzzo@gmail.com",
     "copy": "Copy email",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "dribbble": "Dribbble"
+}
   },
   "footer": {
     "social": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
       "dribbble": "Dribbble"
+    }
+  }
+  ,
+  "resume": {
+    "downloadLabel": "Download resume",
+    "downloadWord": "Word",
+    "downloadPdf": "PDF",
+    "role": "Product Designer",
+    "sections": {
+      "summary": "Summary",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills"
+    },
+    "summary": "Placeholder — describe your professional profile in 2-3 sentences.",
+    "experience": {
+      "1": {
+        "role": "Senior Product Designer",
+        "company": "Placeholder Company",
+        "period": "2022 — present",
+        "description": "Placeholder — describe your responsibilities and impact in this role."
+      },
+      "2": {
+        "role": "Product Designer",
+        "company": "Placeholder Company",
+        "period": "2019 — 2022",
+        "description": "Placeholder — describe your responsibilities and impact in this role."
+      },
+      "3": {
+        "role": "Graphic Designer / UI Designer",
+        "company": "Placeholder Company",
+        "period": "2010 — 2019",
+        "description": "Placeholder — describe your responsibilities and impact in this role."
+      }
+    },
+    "education": {
+      "1": {
+        "degree": "Bachelor's in Design",
+        "school": "Placeholder Institution",
+        "period": "2008 — 2012"
+      },
+      "2": {
+        "degree": "Postgraduate in UX",
+        "school": "Placeholder Institution",
+        "period": "2015 — 2016"
+      }
+    },
+    "skills": {
+      "1": "Product Design",
+      "2": "Design Systems",
+      "3": "Figma",
+      "4": "Prototyping",
+      "5": "User Research",
+      "6": "Accessibility",
+      "7": "Next.js",
+      "8": "Tailwind CSS"
     }
   }
   }
