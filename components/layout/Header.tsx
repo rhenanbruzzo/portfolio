@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import { IconSun, IconMoon, IconMenu2, IconX, IconArrowUpRight } from "@tabler/icons-react"
 import { useActiveSection } from "@/hooks/useActiveSection"
-import { usePathname } from "next/navigation"
 
 export default function Header() {
   const t = useTranslations("nav")
@@ -13,6 +13,7 @@ export default function Header() {
   const [theme, setTheme] = useState<"light" | "dark">("light")
   const activeSection = useActiveSection()
   const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") as "light" | "dark" | null
@@ -30,20 +31,50 @@ export default function Header() {
   }
 
   const handleLinkClick = (e: React.MouseEvent, href: string) => {
-    if (href === "#top") {
-      e.preventDefault()
-      window.scrollTo({ top: 0, behavior: "smooth" })
-      window.history.replaceState(null, "", window.location.pathname)
-    }
+    e.preventDefault()
     setMenuOpen(false)
+  
+    const isEn = pathname.startsWith("/en")
+    const homeUrl = isEn ? "/en" : "/"
+  
+    if (href === "/curriculo") {
+      router.push(isEn ? "/en/curriculo" : "/curriculo")
+      return
+    }
+  
+    if (href === "#top") {
+      const isHome = pathname === "/" || pathname === "/en"
+      if (!isHome) {
+        router.push(homeUrl)
+        setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 300)
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        window.history.replaceState(null, "", window.location.pathname)
+      }
+      return
+    }
+  
+    const anchor = href.replace("#", "")
+    const isHome = pathname === "/" || pathname === "/en"
+  
+    if (!isHome) {
+      router.push(`${homeUrl}#${anchor}`)
+      setTimeout(() => {
+        const el = document.getElementById(anchor)
+        if (el) el.scrollIntoView({ behavior: "smooth" })
+      }, 300)
+    } else {
+      const el = document.getElementById(anchor)
+      if (el) el.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   const navLinks = [
-    { label: t("home"), href: "#top", external: false },
-    { label: t("work"), href: "#work", external: false },
-    { label: t("about"), href: "#about", external: false },
-    { label: t("contact"), href: "#contact", external: false },
-    { label: t("resume"), href: "/curriculo", external: true },
+    { label: t("home"), href: "#top" },
+    { label: t("work"), href: "#work" },
+    { label: t("about"), href: "#about" },
+    { label: t("contact"), href: "#contact" },
+    { label: t("resume"), href: "/curriculo" },
   ]
 
   const isActive = (href: string) => {
@@ -68,8 +99,6 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
               onClick={(e) => handleLinkClick(e, link.href)}
               className={`text-sm font-medium px-3 py-2 rounded transition-all duration-200 ${
                 isActive(link.href)
@@ -136,13 +165,10 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
                 onClick={(e) => handleLinkClick(e, link.href)}
                 className="flex items-center justify-between py-5 border-b border-(--color-border) text-2xl font-display font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors duration-200"
               >
                 {link.label}
-                {link.external && <IconArrowUpRight size={16} stroke={1.5} />}
               </a>
             ))}
           </nav>
@@ -153,17 +179,26 @@ export default function Header() {
 }
 
 function LangToggle() {
+  const pathname = usePathname()
+
+  const getLocalePath = (locale: string) => {
+    // Remove o prefixo de locale atual do pathname
+    const withoutLocale = pathname.replace(/^\/(en)/, "") || "/"
+    if (locale === "en") return `/en${withoutLocale === "/" ? "" : withoutLocale}`
+    return withoutLocale || "/"
+  }
+
   return (
     <div className="flex items-center gap-1 text-sm">
       <a
-        href="/"
+        href={getLocalePath("pt")}
         className="px-2 py-1 rounded text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors duration-200"
       >
         PT
       </a>
       <span className="text-(--color-border-strong)">/</span>
       <a
-        href="/en"
+        href={getLocalePath("en")}
         className="px-2 py-1 rounded text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors duration-200"
       >
         EN
