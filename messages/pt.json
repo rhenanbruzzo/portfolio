@@ -14,7 +14,7 @@
     },
     "about": {
     "heading": "Sobre",
-    "bio": "Sou product designer com 15 anos de experiência criando interfaces para times que se importam com os detalhes. Atuei em projetos B2B e B2C — e-commerce, admin SaaS, aplicativos — sempre buscando equilibrar visão de negócio, experiência do usuário e viabilidade técnica.",
+    "bio": "Product Designer apaixonado e criativo, com 6 anos de experiência criando experiências e interfaces digitais para o ecossistema de e-commerce — atuando em contextos B2B e B2C, em apps, admins e sites.\n\nCom mais de 10 anos de atuação em diversas áreas do design, dedico-me hoje exclusivamente ao design de produtos digitais. Mantenho-me atualizado sobre tendências, ferramentas e boas práticas para entregar experiências que realmente atendam às necessidades dos usuários.\n\nBusco evolução constante, acompanhando metodologias e práticas que gerem impacto real no negócio e na experiência do usuário. Atualmente focado em me especializar em Design Systems e em explorar o uso de inteligência artificial para otimizar processos de criação, documentação e evolução de sistemas de design.",
     "tagsHeading": "Áreas de atuação",
     "tags": {
       "tag1": "Product design",
@@ -82,9 +82,9 @@
     "experience": {
       "1": {
         "role": "Senior Product Designer",
-        "company": "Empresa Placeholder",
-        "period": "2022 — presente",
-        "description": "Placeholder — descreva suas responsabilidades e impacto nessa posição."
+        "company": "CRMBonus",
+        "period": "Jul 2024 — Presente",
+        "description": "Atualmente responsável por criar e documentar o design system da empresa, garantindo consistência e qualidade na experiência do usuário em todos os produtos digitais. Trabalho em colaboração com equipe de design, desenvolvimento e produto para estabelecer diretrizes de UI/UX escaláveis, com foco em eficiência e inovação."
       },
       "2": {
         "role": "Product Designer",

@@ -21,9 +21,11 @@ export default function About() {
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_400px] gap-8 md:gap-10 items-stretch">
         <div className="flex flex-col min-w-0">
-          <p className="font-body text-base md:text-lg leading-relaxed text-(--color-text-secondary)">
-            {t("bio")}
-          </p>
+            <div className="font-body text-base md:text-lg leading-relaxed text-(--color-text-secondary) space-y-4">
+             {t("bio").split("\n\n").map((paragraph, i) => (
+             <p key={i}>{paragraph}</p>
+  ))}
+</div>
 
           <div className="mt-10 md:mt-auto md:pt-10 overflow-hidden">
             <ul className="marquee-track flex gap-2">

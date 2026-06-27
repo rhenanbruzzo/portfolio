@@ -45,18 +45,6 @@ export default function ResumePage() {
 </div>
         </header>
 
-        {/* Resumo */}
-        <section className="mb-10">
-          <h2 className="font-mono text-xs uppercase tracking-wider text-(--color-text-tertiary) mb-4">
-            {t("sections.summary")}
-          </h2>
-          <div className="font-body text-sm leading-relaxed text-(--color-text-secondary) space-y-3">
-            <p>Product Designer apaixonado e criativo, com 6 anos de experiência na criação de experiências e interfaces digitais voltadas para o ecossistema de e-commerce, atuando em contextos B2B e B2C, incluindo apps, admins e sites.</p>
-            <p>Com mais de 10 anos de atuação em diversas áreas do design, agora dedico-me exclusivamente ao design de produtos digitais. Busco o aprimoramento profissional contínuo e mantenho-me atualizado sobre as últimas tendências e melhores práticas em experiências que atendam às necessidades dos usuários.</p>
-            <p>Busco constante evolução profissional, acompanhando tendências, metodologias e boas práticas que gerem impacto real no negócio e na experiência do usuário. Atualmente, estou focado em me aprimorar como Product Designer com especialização em Design Systems, explorando também o uso de inteligência artificial para otimizar processos de criação, documentação e evolução de sistemas de design, aumentando a eficiência e a qualidade das entregas.</p>
-          </div>
-        </section>
-
         {/* Experiência */}
         <section className="mb-10">
           <h2 className="font-mono text-xs uppercase tracking-wider text-(--color-text-tertiary) mb-6">
